@@ -13,11 +13,14 @@ import { ProductsModule } from './modules/products/products.module';
 import { SharedModule } from './shared/shared.module';
 import { HeaderComponent } from './shared/header/header.component';
 import { CartModule } from './modules/cart/cart.module';
+import { CoreComponent } from './core/core.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
+    CoreComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +33,8 @@ import { CartModule } from './modules/cart/cart.module';
     AuthModule,
     ProductsModule,
     SharedModule,
-    CartModule
+    CartModule,
+    RouterModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

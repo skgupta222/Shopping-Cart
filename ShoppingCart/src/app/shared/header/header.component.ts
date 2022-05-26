@@ -45,7 +45,7 @@ export class HeaderComponent implements OnInit {
     this.authService.updatedUserSelection(fromAuthModels.UserModel);
     localStorage.removeItem('user');
 
-    this.router.navigate(['/products']);
+    this.router.navigate(['home']);
     this.alertService.danger('You are logged out');
 
     setTimeout(() => {

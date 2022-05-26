@@ -52,7 +52,7 @@ export class LoginComponent implements OnInit {
           this.alertService.success(
             'Welcome Back ' + this.user.username + ' !'
           );
-          this.route.navigate(['/shopping/products']);
+          this.route.navigate(['products']);
         }, 1000);
       },
       error: (err: any) => {
