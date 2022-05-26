@@ -29,7 +29,7 @@ import { RouterModule } from '@angular/router';
     HttpClientModule,
     FormsModule,
     NgxSpinnerModule,
-    AlertModule.forRoot({maxMessages: 5, timeout: 5000, positionX: 'right'}),
+    AlertModule.forRoot({maxMessages: 5, timeout: 1000, positionX: 'right'}),
     AuthModule,
     ProductsModule,
     SharedModule,

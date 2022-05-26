@@ -10,13 +10,13 @@
 					<div class="card-body">
 						<h6 class="card-title">{{product.name}}</h6>
 						<p class="card-text">Price : ${{product.price}}</p>
-						<p class="card-text">Quantity : {{product.quantity}}</p>
+						<!-- <p class="card-text">Quantity : {{product.quantity}}</p> -->
 					</div>
 					<div class="text-center mb-1">
 						<div class="btn-group" role="group" aria-label="Basic example">
 							<button type="button" class="btn btn-info" [routerLink]="['/shopping/product-view', product.id]"
 									title="View Product Details"><i class="fas fa-search"></i> View</button>
-							<app-cart-button-widget [product]="product" [text]="'Cart'"></app-cart-button-widget>
+							<app-cart-button-widget [product]="product" [text]="'Add'"></app-cart-button-widget>
 
 						</div>
 					</div>

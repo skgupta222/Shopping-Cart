@@ -53,7 +53,7 @@ export class LoginComponent implements OnInit {
             'Welcome Back ' + this.user.username + ' !'
           );
           this.route.navigate(['products']);
-        }, 1000);
+        }, 0);
       },
       error: (err: any) => {
         this.alertService.danger('Unable to login');

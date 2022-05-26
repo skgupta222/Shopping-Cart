@@ -34,6 +34,11 @@ const routes: Routes = [
             (m) => m.CategoryModule
           ),
       },
+      {
+        path: '',
+        redirectTo: '',
+        pathMatch: 'full'
+      }
     ],
   },
   { path: '**', redirectTo: 'not-found' },
