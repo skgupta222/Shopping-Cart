@@ -5,7 +5,22 @@ var database = {
   categories: [],
   carts: [],
   users: [],
+  students: []
 };
+
+for (var i = 1; i <= 100; i++) {
+  database.students.push({
+    id: i,
+    name: faker.name.findName(),
+    external_id: faker.random.number(4),
+    grade: faker.random.arrayElement([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]),
+    arrival_location: faker.address.city(),
+    dismissal_location: faker.address.city(),
+    family_carpool: faker.random.number(3),
+    dismissal_default: faker.random.arrayElement(['abc', 'xyz', 'def', 'mno', 'zzz']),
+
+  });
+}
 
 for (var i = 1; i <= 200; i++) {
   database.products.push({

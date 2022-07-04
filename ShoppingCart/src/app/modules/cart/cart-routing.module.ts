@@ -5,6 +5,10 @@ import { CartComponent } from './cart.component';
 
 const routes: Routes = [
   { path: '', canActivate: [AuthGuard], component: CartComponent },
+  {
+    path: 'checkout',
+    loadChildren: () => import('../checkout/checkout.module').then((m) => m.CheckoutModule),
+  },
 ];
 
 @NgModule({

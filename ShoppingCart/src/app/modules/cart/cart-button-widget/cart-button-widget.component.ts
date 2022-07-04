@@ -93,7 +93,15 @@ export class CartButtonWidgetComponent implements OnInit {
       return;
     }
 
-    
+    for (let index = 0; index < this.cart.products.length; index++) {
+      if (this.cart.products[index].id == this.product.id) {
+        this.alertService.info('Removing Product From Shopping Cart');
+        this.cart.products.splice(index, 1);
+        this.updateCartApi();
+        this.setButtonSettings();
+        return;
+      }
+    }
     this.alertService.info('Adding Product To Shopping Cart');
     this.cart.products.push(this.product);
     this.updateCartApi();
